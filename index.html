@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace, Tag, Transfer | Courageous Daring Wonderful You</title>
+<meta name="description" content="A private, three-round exercise that helps you trace judgment, adaptability, and clarity from ambiguity to where you built them, then turn each into a one-sentence tag you can say out loud. Nothing you type is saved or sent.">
+<meta name="author" content="Courageous Daring Wonderful You (CDWY)">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b6b66">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pinkandpolicy.github.io/trace-tag-transfer/">  
+<meta property="og:site_name" content="Courageous Daring Wonderful You">
+<meta property="og:title" content="Trace, Tag, Transfer: name the skills no job description names">
+<meta property="og:description" content="Trace three hidden skills to where you built them, tag each in one plain sentence, and carry them into your next room. Private by design.">
+<meta property="og:image" content="https://pinkandpolicy.github.io/trace-tag-transfer/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trace, Tag, Transfer: a private exercise for naming the skills no job description names">
+<meta name="twitter:image" content="https://pinkandpolicy.github.io/trace-tag-transfer/og-image.png">  
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trace, Tag, Transfer: name the skills no job description names">
+<meta name="twitter:description" content="Trace three hidden skills to where you built them, tag each in one plain sentence, and carry them into your next room. Private by design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one centered column, a step rail on top, one step visible at a time. */
+:root {
+  --bg: #f3f6f7;
+  --surface: #ffffff;
+  --ink: #14232b;
+  --muted: #55676f;
+  --line: #d5dfe2;
+  --accent: #0b6b66;
+  --accent-ink: #ffffff;
+  --glow: #f2b84b;
+  --soft: #e3f1ef;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1a1f; --surface: #172830; --ink: #e8f0f2; --muted: #9db3bb;
+    --line: #2b434d; --accent: #4fc3bb; --accent-ink: #0b1a1e; --glow: #f2b84b; --soft: #1d3a40;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1a1f; --surface: #172830; --ink: #e8f0f2; --muted: #9db3bb;
+  --line: #2b434d; --accent: #4fc3bb; --accent-ink: #0b1a1e; --glow: #f2b84b; --soft: #1d3a40;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 64px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.55rem; margin-bottom: 6px; }
+h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+p { margin: 0 0 12px; }
+.lede { color: var(--muted); }
+header.top { display: flex; flex-direction: column; gap: 4px; padding: 8px 0 14px; }
+.private { display: inline-flex; gap: 8px; align-items: center; font-size: .9rem; color: var(--muted); }
+.private::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex: none; }
+
+nav.rail { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+nav.rail button {
+  flex: 1 1 auto; min-width: 92px; padding: 9px 10px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--muted); border-radius: 8px; font: 600 .85rem var(--body); cursor: pointer; text-align: left;
+}
+nav.rail button .n { display: block; font-size: .72rem; font-weight: 400; }
+nav.rail button[aria-current="step"] { border-color: var(--accent); color: var(--ink); box-shadow: inset 0 -3px 0 var(--accent); }
+nav.rail button.done .n::after { content: " · done"; color: var(--accent); }
+
+section.step { display: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 20px; }
+section.step.on { display: block; }
+.tagline { display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.lens { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin: 14px 0; }
+.lens div { background: var(--soft); border-radius: 8px; padding: 10px 12px; font-size: .95rem; }
+.lens b { display: block; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+ol.prompts { padding-left: 22px; margin: 0 0 8px; }
+ol.prompts li { margin-bottom: 8px; }
+label { display: block; font-weight: 600; margin: 14px 0 6px; }
+textarea, input[type="text"] {
+  width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 8px; padding: 10px 12px;
+}
+textarea { min-height: 96px; resize: vertical; }
+:focus-visible { outline: 3px solid var(--glow); outline-offset: 2px; }
+.hint { font-size: .9rem; color: var(--muted); margin-top: 4px; }
+
+.formula { display: grid; grid-template-columns: auto 1fr; gap: 8px 10px; align-items: center; }
+.formula span { font-weight: 600; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 6px; }
+.chip { border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 999px; padding: 3px 12px; font: 600 .88rem var(--body); cursor: pointer; }
+.chip:hover { background: var(--soft); }
+.preview { margin-top: 14px; padding: 14px 16px; border-left: 5px solid var(--glow); background: var(--soft); border-radius: 0 8px 8px 0; font-family: var(--display); font-size: 1.12rem; min-height: 3.2em; }
+.preview.empty { color: var(--muted); font-family: var(--body); font-size: 1rem; }
+
+.ladder { width: 100%; border-collapse: collapse; font-size: .95rem; margin-top: 6px; }
+.ladder th, .ladder td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ladder th { width: 5.5em; color: var(--muted); font-weight: 600; }
+
+.actions { display: flex; gap: 10px; justify-content: space-between; margin-top: 24px; flex-wrap: wrap; }
+button.btn { font: 600 1rem var(--body); padding: 10px 18px; border-radius: 8px; border: 1px solid var(--accent); cursor: pointer; background: var(--accent); color: var(--accent-ink); }
+button.btn.ghost { background: transparent; color: var(--accent); }
+.three { display: grid; gap: 12px; margin-top: 8px; }
+.card-out { border: 2px solid var(--ink); border-radius: 12px; padding: 20px; background: var(--surface); }
+.card-out h3 { margin-top: 0; }
+.card-out ul { padding-left: 20px; margin: 8px 0 14px; }
+.card-out li { margin-bottom: 8px; }
+.card-out .dest { border-top: 1px dashed var(--line); padding-top: 12px; }
+.closing { font-family: var(--display); font-size: 1.25rem; margin: 16px 0 0; padding-top: 14px; border-top: 2px solid var(--glow); }
+.empty-note { color: var(--muted); font-style: italic; }
+.status { min-height: 1.4em; font-size: .9rem; color: var(--accent); margin-top: 8px; }
+
+footer.site { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .9rem; }
+footer.site .brand { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 1rem; margin: 0 0 4px; }
+footer.site p { margin: 0 0 4px; }
+
+@media (max-width: 480px) { h1 { font-size: 1.6rem; } .formula { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: no-preference) { section.step.on { animation: rise .25s ease-out; } }
+@keyframes rise { from { transform: translateY(6px); opacity: .4; } to { transform: none; opacity: 1; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Trace, Tag, Transfer</h1>
+    <div class="private">Everything you type stays on this page. Nothing is saved or sent. Close the tab and it is gone, so copy your card first.</div>
+  </header>
+  <nav class="rail" id="rail" aria-label="Steps"></nav>
+
+  <section class="step" id="s0" data-title="Start">
+    <span class="tagline">Version 1.0</span>
+    <h2>The skills no job description names</h2>
+    <p class="lede">You will work through three skills the hiring reports keep naming: judgment, adaptability, and clarity from ambiguity. For each one, trace it to where you built it, then tag it in one plain sentence.</p>
+    <h3>How each round works</h3>
+    <ol class="prompts">
+      <li><b>Trace.</b> Pick a prompt and write one memory. It is for your eyes only.</li>
+      <li><b>Tag.</b> Turn that memory into one sentence: I [verb] [who or what] so that [result].</li>
+      <li><b>Transfer.</b> Choose where your three tags go next.</li>
+    </ol>
+    <p>Your tag does not have to be pretty. It has to run. You can polish it later, like any version 1.0.</p>
+    <p class="hint">These parallels are an analogy, not a formal framework: traceability and debugging, labeling and versioning, transfer learning.</p>
+    <div class="actions"><span></span><button class="btn" data-go="1">Start with Judgment</button></div>
+  </section>
+
+  <section class="step" id="s1" data-title="Judgment"></section>
+  <section class="step" id="s2" data-title="Adaptability"></section>
+  <section class="step" id="s3" data-title="Clarity"></section>
+
+  <section class="step" id="s4" data-title="Transfer">
+    <span class="tagline">Round 4 · Transfer</span>
+    <h2>Carry it into a new room</h2>
+    <p class="lede">Engineers call this transfer learning: take what you learned in one place into a new setting instead of starting over. You have been doing it your whole life.</p>
+    <h3>Walk Into the Room</h3>
+    <p>Picture a room you want to be in a year from now: a lab, a team meeting, an interview, a stage. See the door. Walk in. Who is there? What does that room need? Which of your tags walked in with you?</p>
+    <label for="room">The room</label>
+    <input type="text" id="room" placeholder="A security team meeting, a campus lab, my next interview">
+    <h3>Who's Waiting for This</h3>
+    <p>Every team has a problem it has not solved. What problem is waiting for someone with your tag? Who would breathe easier if you showed up?</p>
+    <label for="waiting">What is waiting for you</label>
+    <textarea id="waiting" placeholder="A team that needs someone to turn a messy request into a clear plan"></textarea>
+    <h3>Pack the Bag</h3>
+    <p>Your three tags are packed. Which do you reach for first in the new room, and which one surprised you by being there?</p>
+    <label for="first">Reach for first</label>
+    <select id="first" style="width:100%;font:inherit;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)">
+      <option value="">Choose a tag</option>
+    </select>
+    <p class="hint" style="margin-top:14px">You are not borrowing credibility. You are bringing evidence.</p>
+    <div class="actions"><button class="btn ghost" data-go="3">Back</button><button class="btn" data-go="5">See my card</button></div>
+  </section>
+
+  <section class="step" id="s5" data-title="Your card">
+    <span class="tagline">Trust</span>
+    <h2>Your three v1 tags</h2>
+    <p class="lede">Version 2 is yours to build. Say a tag out loud in your next interview, review, or introduction.</p>
+    <div class="card-out" id="card"></div>
+    <div class="actions">
+      <button class="btn ghost" data-go="4">Back</button>
+      <button class="btn" id="copyCard" type="button">Copy card</button>
+    </div>
+    <div class="status" id="cardStatus" role="status"></div>
+  </section>
+
+  <footer class="site">
+    <p class="brand">Courageous Daring Wonderful You (CDWY)</p>
+    <p>Coaching, consulting, speaking, and community for underrepresented professionals in tech.</p>
+    <p>Also from CDWY: the podcast <em>Bytes, Bits &amp; Brilliance</em>.</p>
+    <p>&copy; 2026 Courageous Daring Wonderful You. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var AREAS = [
+    {
+      id: 1, name: "Judgment", lens: "Trade-off analysis",
+      words: "Analytical thinking, critical thinking",
+      verbs: ["weighed", "prioritized", "decided", "flagged", "advised", "chose"],
+      prompts: [
+        "Who trusted your read on a room, a person, or a situation before you had any title? What did they see in you?",
+        "Remember deciding something when no one was going to tell you if you were right. What did you listen to?",
+        "When did you say yes or no while everything around you pushed the other way? What were you protecting?",
+        "What do you know about people or situations that no one ever taught you?",
+        "Think of a choice between two imperfect options where the stakes were real. What did you weigh first?"
+      ],
+      example: "I weighed two imperfect options for my team so that we shipped on time."
+    },
+    {
+      id: 2, name: "Adaptability", lens: "Porting and compatibility",
+      words: "Resilience, flexibility, agility, adaptability",
+      verbs: ["learned", "adjusted", "rebuilt", "translated", "ramped up", "pivoted"],
+      prompts: [
+        "Picture your first day somewhere no one looked, sounded, or moved like you. What did you do with your first hour?",
+        "When did life change the plan overnight? What did you carry forward, and what did you set down?",
+        "Who did you have to become to get through a season you didn't choose?",
+        "What did you learn to read (an accent, a silence, a mood) without anyone handing you a manual?",
+        "When did you feel you had nothing left and still showed up? What got you through the door?"
+      ],
+      example: "I learned a new system in a week so that my group kept its deadline."
+    },
+    {
+      id: 3, name: "Clarity from ambiguity", lens: "Requirements gathering and debugging",
+      words: "Problem-solving, communication",
+      verbs: ["untangled", "mapped", "simplified", "organized", "broke down", "clarified"],
+      prompts: [
+        "What mess did everyone else walk around until you rolled up your sleeves?",
+        "When did someone come to you confused and leave knowing their next step?",
+        "Remember being the translator between two people who weren't hearing each other. What did you hear that they missed?",
+        "When did you not know where to start and start anyway? What was your first move?",
+        "Whose chaos did you quietly calm, and did anyone notice?"
+      ],
+      example: "I explained complex information to people under pressure so they could decide."
+    }
+  ];
+  var state = { 1: {}, 2: {}, 3: {} };
+  var current = 0;
+  var visited = {};
+
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function $(id) { return document.getElementById(id); }
+
+  function tagSentence(id) {
+    var t = state[id];
+    var v = (t.verb || "").trim(), w = (t.who || "").trim(), r = (t.result || "").trim();
+    if (!v && !w && !r) return "";
+    return "I " + (v || "[verb]") + " " + (w || "[who or what]") + " so that " + (r || "[result]") + ".";
+  }
+  function tagIsReady(id) {
+    var t = state[id];
+    return !!((t.verb || "").trim() && (t.who || "").trim() && (t.result || "").trim());
+  }
+
+  function buildArea(a) {
+    var s = $("s" + a.id);
+    var nextTitle = a.id < 3 ? AREAS[a.id].name : "Transfer";
+    s.appendChild(el("span", { "class": "tagline" }, "Round " + a.id + " of 3 · " + a.name));
+    s.appendChild(el("h2", null, a.name));
+    var lens = el("div", { "class": "lens" });
+    var d1 = el("div"); d1.appendChild(el("b", null, "Engineering lens")); d1.appendChild(document.createTextNode(a.lens));
+    var d2 = el("div"); d2.appendChild(el("b", null, "Words the reports use")); d2.appendChild(document.createTextNode(a.words));
+    lens.appendChild(d1); lens.appendChild(d2); s.appendChild(lens);
+
+    s.appendChild(el("h3", null, "1. Trace"));
+    s.appendChild(el("p", { "class": "hint" }, "Pick any prompt that pulls a memory. You do not need to answer all five."));
+    var ol = el("ol", { "class": "prompts" });
+    a.prompts.forEach(function (p) { ol.appendChild(el("li", null, p)); });
+    s.appendChild(ol);
+    s.appendChild(el("label", { "for": "mem" + a.id }, "One memory, for your eyes only"));
+    var mem = el("textarea", { id: "mem" + a.id, placeholder: "Write what happened, in your own words." });
+    s.appendChild(mem);
+    s.appendChild(el("p", { "class": "hint" }, "Share only your tag with anyone, never the memory behind it."));
+
+    s.appendChild(el("h3", null, "2. Tag"));
+    var f = el("div", { "class": "formula" });
+    [["verb", "I", "verb"], ["who", "", "who or what"], ["result", "so that", "result"]].forEach(function (row) {
+      f.appendChild(el("span", null, row[1] || "…"));
+      var inp = el("input", { type: "text", id: "tag" + a.id + row[0], "aria-label": row[2], placeholder: row[2] });
+      inp.addEventListener("input", function () { state[a.id][row[0]] = inp.value; refreshPreview(a.id); });
+      f.appendChild(inp);
+    });
+    s.appendChild(f);
+    s.appendChild(el("p", { "class": "hint" }, "Verb ideas. Tap one to fill the first box."));
+    var chips = el("div", { "class": "chips" });
+    a.verbs.forEach(function (v) {
+      var c = el("button", { type: "button", "class": "chip" }, v);
+      c.addEventListener("click", function () { var i = $("tag" + a.id + "verb"); i.value = v; state[a.id].verb = v; refreshPreview(a.id); i.focus(); });
+      chips.appendChild(c);
+    });
+    s.appendChild(chips);
+    var pv = el("div", { "class": "preview empty", id: "pv" + a.id, "aria-live": "polite" }, "Your tag appears here as you type.");
+    s.appendChild(pv);
+    s.appendChild(el("p", { "class": "hint" }, "Example: " + a.example));
+
+    s.appendChild(el("h3", null, "Level ladder"));
+    s.appendChild(el("p", { "class": "hint" }, "Which level is your sentence at? Move it up one."));
+    var tb = el("table", { "class": "ladder" });
+    [["Vague", "I helped out."], ["Better", "I translated for my family."], ["Tagged", "I explained complex information to people under pressure so they could decide."]].forEach(function (r) {
+      var tr = el("tr"); tr.appendChild(el("th", { scope: "row" }, r[0])); tr.appendChild(el("td", null, r[1])); tb.appendChild(tr);
+    });
+    s.appendChild(tb);
+
+    var act = el("div", { "class": "actions" });
+    var back = el("button", { type: "button", "class": "btn ghost", "data-go": String(a.id - 1) }, "Back");
+    var next = el("button", { type: "button", "class": "btn", "data-go": String(a.id + 1) }, "Next: " + nextTitle);
+    act.appendChild(back); act.appendChild(next); s.appendChild(act);
+  }
+
+  function refreshPreview(id) {
+    var p = $("pv" + id), t = tagSentence(id);
+    if (t) { p.textContent = t; p.className = "preview"; }
+    else { p.textContent = "Your tag appears here as you type."; p.className = "preview empty"; }
+  }
+
+  function buildRail() {
+    var rail = $("rail");
+    rail.textContent = "";
+    var steps = document.querySelectorAll("section.step");
+    steps.forEach(function (s, i) {
+      var b = el("button", { type: "button", "data-go": String(i) });
+      b.appendChild(document.createTextNode(s.getAttribute("data-title")));
+      b.appendChild(el("span", { "class": "n" }, i === 0 ? "Start" : (i <= 3 ? "Round " + i : (i === 4 ? "Round 4" : "Finish"))));
+      if (i === current) b.setAttribute("aria-current", "step");
+      if (i >= 1 && i <= 3 && tagIsReady(i)) b.className = "done";
+      if (i === 4 && ($("room").value || "").trim()) b.className = "done";
+      rail.appendChild(b);
+    });
+  }
+
+  function renderCard() {
+    var c = $("card");
+    c.textContent = "";
+    c.appendChild(el("h3", null, "My tags, version 1.0"));
+    var ul = el("ul");
+    AREAS.forEach(function (a) {
+      var li = el("li");
+      li.appendChild(el("b", null, a.name + ": "));
+      var t = tagSentence(a.id);
+      if (t && tagIsReady(a.id)) li.appendChild(document.createTextNode(t));
+      else { var span = el("span", { "class": "empty-note" }, t ? t + " (unfinished)" : "Not written yet. Go back to the round to add it."); li.appendChild(span); }
+      ul.appendChild(li);
+    });
+    c.appendChild(ul);
+    var dest = el("div", { "class": "dest" });
+    var room = ($("room").value || "").trim();
+    var wait = ($("waiting").value || "").trim();
+    var first = $("first").value;
+    dest.appendChild(el("p", null, "Where they go next: " + (room || "Not chosen yet.")));
+    if (wait) dest.appendChild(el("p", null, "What is waiting for me: " + wait));
+    if (first) dest.appendChild(el("p", null, "I reach for this first: " + first));
+    var tagWord = first ? first.split(":")[0] : "";
+    c.appendChild(dest);
+    c.appendChild(el("p", { "class": "closing" }, room && tagWord ? "I'm taking " + tagWord.toLowerCase() + " into " + room + "." : "I'm taking [tag] into [room]."));
+  }
+  function cardText() {
+    var lines = ["My tags, version 1.0", ""];
+    AREAS.forEach(function (a) { var t = tagSentence(a.id); if (t) lines.push(a.name + ": " + t); });
+    var room = ($("room").value || "").trim(), wait = ($("waiting").value || "").trim(), first = $("first").value;
+    lines.push("");
+    if (room) lines.push("Where they go next: " + room);
+    if (wait) lines.push("What is waiting for me: " + wait);
+    if (first) lines.push("I reach for this first: " + first);
+    var tw = first ? first.split(":")[0].toLowerCase() : "";
+    lines.push("");
+    lines.push(room && tw ? "I'm taking " + tw + " into " + room + "." : "I'm taking [tag] into [room].");
+    return lines.join("\n");
+  }
+
+  function fillFirstOptions() {
+    var sel = $("first"), keep = sel.value;
+    while (sel.options.length > 1) sel.remove(1);
+    AREAS.forEach(function (a) {
+      var t = tagSentence(a.id);
+      if (t && tagIsReady(a.id)) { var o = el("option", { value: a.name + ": " + t }, a.name + ": " + t); sel.appendChild(o); }
+    });
+    sel.value = keep;
+    if (sel.value !== keep) sel.value = "";
+  }
+
+  function copyText(text, statusId) {
+    var st = $(statusId);
+    function fallback() {
+      var ta = el("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      st.textContent = ok ? "Copied." : "Copy did not work here. Select the text and copy it yourself.";
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { st.textContent = "Copied."; }, fallback);
+      } else fallback();
+    } catch (e) { fallback(); }
+  }
+
+  function go(n) {
+    n = Math.max(0, Math.min(5, n));
+    current = n;
+    var steps = document.querySelectorAll("section.step");
+    steps.forEach(function (s, i) { s.className = "step" + (i === n ? " on" : ""); });
+    if (n === 4) fillFirstOptions();
+    if (n === 5) renderCard();
+    buildRail();
+    var top = document.querySelector("header.top");
+    if (top && top.scrollIntoView) top.scrollIntoView({ block: "start" });
+  }
+
+  AREAS.forEach(buildArea);
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-go]") : null;
+    if (b) go(parseInt(b.getAttribute("data-go"), 10));
+  });
+  $("copyCard").addEventListener("click", function () { copyText(cardText(), "cardStatus"); });
+  $("room").addEventListener("input", buildRail);
+  go(0);
+})();
+</script>
+</body>
+</html>
